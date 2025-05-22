@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- This section defines all the commands -->
+  <Commands package="guidMethodDependencyCopierPackage">
+    <Groups>
+      <Group guid="guidMethodDependencyCopierPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT"/>
+		  <!--<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"/>-->
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <!-- Define our main command -->
+      <Button guid="guidMethodDependencyCopierPackageCmdSet" id="CopyMethodWithDependenciesId" priority="0x0100" type="Button">
+        <Parent guid="guidMethodDependencyCopierPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Copy Method with Dependencies</ButtonText>
+          <ToolTipText>Copies the selected method and all methods it calls</ToolTipText>
+          <CommandName>CopyMethodWithDependencies</CommandName>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <!-- This section defines the symbols for our commands -->
+  <Symbols>
+    <!-- This is the package guid -->
+      <GuidSymbol name="guidMethodDependencyCopierPackage" value="{5de521cd-1ac8-458f-9a1c-e80b46159572}"/>
+      <GuidSymbol name="guidMethodDependencyCopierPackageCmdSet" value="{cb9dfd7f-2fcc-4a3e-aae8-f7fe30b1cfac}">
+        <IDSymbol name="MyMenuGroup" value="0x1020" />
+        <IDSymbol name="CopyMethodWithDependenciesId" value="0x0100" />
+      </GuidSymbol>
+      <!--<GuidSymbol name="guidImages" value="{YOUR-IMAGES-GUID-HERE}">
+        <IDSymbol name="bmpPic1" value="1" />
+      </GuidSymbol>-->
+  </Symbols>
+</CommandTable>
