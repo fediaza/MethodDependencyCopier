@@ -52,6 +52,12 @@
     <Compile Include="TextViewExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+  <VSCTCompile Include="CommandTable.vsct">
+    <ResourceName>Menus.ctmenu</ResourceName>
+    <SubType>Designer</SubType>
+  </VSCTCompile>
+</ItemGroup>
+  <ItemGroup>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
